@@ -1,0 +1,67 @@
+{
+    "name": "app-ocr-juridico-dev",
+    "version": "1.0.0",
+    "description": "OCR Jurídico: Converte arquivos escaneados (PDF imagem, JPG, PNG) em texto legível para análise jurídica",
+    "auth": {
+        "description": {
+            "title": "Configuração de Acesso",
+            "body": "Configure suas credenciais para acessar o serviço.",
+            "footer": "As credenciais são armazenadas com segurança.",
+            "link": ""
+        },
+        "params": [            {
+                "name": "whomToken",
+                "type": "string",
+                "inputType": "text",
+                "required": true,
+                "label": "Token do Whom"
+            },
+            {
+                "name": "whomExtensionId",
+                "type": "string",
+                "inputType": "text",
+                "required": true,
+                "label": "ID da Extensão do Whom"
+            }        
+        ]
+    },
+    "functions": {
+        "converterDocumento": {
+            "script": "dist/converterDocumento.js",
+            "description": "Converte documento escaneado em texto",
+            "category": "judicial",
+                "values": {
+                "parametro": "valor"
+            },
+            "params": [
+                {
+                    "name": "parametro",
+                    "type": "string",
+                    "inputType": "text",
+                    "required": true,
+                    "label": "Parâmetro principal"
+                }
+            ]        },
+        "extrairDados": {
+            "script": "dist/extrairDados.js",
+            "description": "Extrai dados estruturados de documento",
+            "category": "judicial",
+            "values": {
+                "parametro": "valor"
+            },
+            "params": [
+                {
+                    "name": "parametro",
+                    "type": "string",
+                    "inputType": "text",
+                    "required": true,
+                    "label": "Parâmetro principal"
+                }
+            ]        }    },
+    "config": {
+        "timeout": 60000,
+        "max_retries": 3,
+        "cache_ttl": 3600
+    },
+    "mcp": true
+}

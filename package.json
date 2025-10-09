@@ -1,0 +1,19 @@
+{
+    "name": "app-ocr-juridico-dev",
+    "version": "1.0.0",
+    "description": "OCR Jurídico: Converte arquivos escaneados (PDF imagem, JPG, PNG) em texto legível para análise jurídica",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "clean": "rm -rf dist"
+    },
+    "dependencies": {
+        "docgo-sdk": "github:doc9-oficial/docgo-sdk-js"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "typescript": "^5.0.0"
+    }
+}
