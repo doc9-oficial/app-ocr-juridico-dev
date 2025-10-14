@@ -28,6 +28,7 @@
     },
     "functions": {
         "converterDocumento": {
+            "name": "Converter Documento - Which AI",
             "script": "dist/converterDocumento.js",
             "description": "Converte documento escaneado em texto",
             "category": "judicial",
@@ -51,6 +52,7 @@
             ]
         },
         "extrairDados": {
+            "name": "Extrair Dados - Which AI",
             "script": "dist/extrairDados.js",
             "description": "Extrai dados estruturados de documento",
             "category": "judicial",
