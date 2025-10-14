@@ -9,7 +9,8 @@
             "footer": "As credenciais são armazenadas com segurança.",
             "link": ""
         },
-        "params": [            {
+        "params": [
+            {
                 "name": "whomToken",
                 "type": "string",
                 "inputType": "text",
@@ -22,7 +23,7 @@
                 "inputType": "text",
                 "required": true,
                 "label": "ID da Extensão do Whom"
-            }        
+            }
         ]
     },
     "functions": {
@@ -30,8 +31,14 @@
             "script": "dist/converterDocumento.js",
             "description": "Converte documento escaneado em texto",
             "category": "judicial",
-                "values": {
+            "values": {
                 "parametro": "valor"
+            },
+            "help": {
+                "title": "Como usar a função converterDocumento",
+                "body": "Use esta função para converter documentos escaneados em texto legível. Forneça o parâmetro necessário para especificar o documento a ser convertido.",
+                "footer": "",
+                "link": ""
             },
             "params": [
                 {
@@ -41,7 +48,8 @@
                     "required": true,
                     "label": "Parâmetro principal"
                 }
-            ]        },
+            ]
+        },
         "extrairDados": {
             "script": "dist/extrairDados.js",
             "description": "Extrai dados estruturados de documento",
@@ -49,6 +57,12 @@
             "values": {
                 "parametro": "valor"
             },
+            "help": {
+                "title": "Como usar a função extrairDados",
+                "body": "Use esta função para extrair dados estruturados de documentos convertidos. Forneça o parâmetro necessário para especificar o documento de origem.",
+                "footer": "",
+                "link": ""
+            },
             "params": [
                 {
                     "name": "parametro",
@@ -57,7 +71,9 @@
                     "required": true,
                     "label": "Parâmetro principal"
                 }
-            ]        }    },
+            ]
+        }
+    },
     "config": {
         "timeout": 60000,
         "max_retries": 3,
